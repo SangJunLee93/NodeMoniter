@@ -2,11 +2,11 @@
 node_modules/
 
 # Build output
-dist/
+dist/*
+!dist/*.dmg
 out/
 
 # Electron
-*.dmg
 *.pkg
 
 # Environment
