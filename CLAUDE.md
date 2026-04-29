@@ -19,15 +19,24 @@ NodeMoniter/
 │   └── TRACKING.md           # 현재 진행 중인 작업 상태
 ├── src/
 │   ├── main/                 # Electron main process
-│   │   ├── index.ts          # 앱 진입점, BrowserWindow 생성
-│   │   ├── ipc/              # IPC handler 등록
-│   │   └── process/          # 프로세스 조회 로직 (ps, lsof 등)
+│   │   └── index.ts          # 앱 진입점, BrowserWindow 생성
+│   ├── preload/              # Preload 스크립트
+│   │   ├── index.ts
+│   │   └── index.d.ts
 │   └── renderer/             # Electron renderer process (React)
-│       ├── App.tsx
-│       ├── components/
-│       └── hooks/
+│       ├── index.html
+│       └── src/
+│           ├── main.tsx      # React 진입점
+│           ├── App.tsx
+│           ├── assets/
+│           ├── components/
+│           └── hooks/
 ├── electron.vite.config.ts
+├── tailwind.config.js
+├── postcss.config.js
 ├── tsconfig.json
+├── tsconfig.node.json
+├── tsconfig.web.json
 ├── package.json
 └── REQUIREMENTS.md
 ```
